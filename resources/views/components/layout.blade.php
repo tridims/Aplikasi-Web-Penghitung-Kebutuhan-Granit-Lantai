@@ -28,7 +28,7 @@
         <div class="container flex items-center justify-center p-6 mx-auto text-white capitalize dark:text-gray-300">
             <a href="/" class="text-white transition-colors duration-200 transform dark:text-gray-200 border-b-2 border-dark-500 mx-1.5 sm:mx-6">home</a>
 
-            <a href="#" class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform dark:hover:text-gray-200 hover:border-dark-500 mx-1.5 sm:mx-6">Source Code</a>
+            <a href="https://github.com/tridims/Aplikasi-Web-Penghitung-Kebutuhan-Granit-Lantai" class="border-b-2 border-transparent hover:text-gray-800 transition-colors duration-200 transform dark:hover:text-gray-200 hover:border-dark-500 mx-1.5 sm:mx-6">Source Code</a>
         </div>
     </nav>
 
@@ -43,7 +43,7 @@
 
         <div class="flex -mx-2">
 
-            <a href="#" class="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Github">
+            <a href="https://github.com/tridims/Aplikasi-Web-Penghitung-Kebutuhan-Granit-Lantai" class="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Github">
                 Source
             </a>
         </div>

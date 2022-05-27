@@ -48,7 +48,9 @@ class CalculatorController extends Controller
         float $lebarGranitCm
     ): int {
         $luasDaerah = $panjangRuangMeter * $lebarRuangMeter; // m2
-        $luasGranit = $panjangGranitCm * $lebarGranitCm / 100;
+        $luasGranit = $panjangGranitCm * $lebarGranitCm / 10000; // m2
+
+        // dd($luasDaerah, $luasGranit);
 
         return intval(ceil($luasDaerah / $luasGranit));
     }

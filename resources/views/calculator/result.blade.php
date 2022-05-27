@@ -24,7 +24,7 @@
               <i class="fa-solid fa-house"></i> Luas Rumah {{$luas}} ㎡ ({{$panjang_ruangan}} x {{$lebar_ruangan}} Meter)
             </div>
             <div><i class="fa-solid fa-box"></i> Jumlah Granit Yang Dibutuhkan {{$jumlah_granit}} buah</div>
-            <div><i class="fa-solid fa-box"></i> Jumlah Kardus Yang Dibutuhkan {{$jumlah_kardus}} dus</div>
+            <div><i class="fa-solid fa-box"></i> Jumlah Pembelian Yang Dibutuhkan {{$jumlah_kardus}} dus</div>
             <div><i class="fa-solid fa-tag"></i>
               Total Biaya Rp. {{number_format($total_harga, 0, ',', '.');}}
             </div>
