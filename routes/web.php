@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CalculatorController;
+use App\Http\Controllers\GraniteTileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +24,30 @@ use Illuminate\Support\Facades\Route;
 // update - Update listing
 // destroy - Delete listing
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// All GraniteTile Products
+Route::get('/', [GraniteTileController::class, 'index']);
+
+// Show create form
+Route::get('/granite-tiles/create', [GraniteTileController::class, 'create']);
+
+// create new GraniteTile
+Route::post('/granite-tiles', [GraniteTileController::class, 'store']);
+
+// show single GraniteTile
+Route::get('/granite-tiles/{graniteTile}', [GraniteTileController::class, 'show']);
+
+// Remove GraniteTile
+Route::delete('/granite-tiles/{graniteTile}', [GraniteTileController::class, 'destroy']);
+
+// show edit form for GraniteTile
+Route::get('/granite-tiles/{graniteTile}/edit', [GraniteTileController::class, 'edit']);
+
+// Update GraniteTile
+Route::put('/granite-tiles/{graniteTile}', [GraniteTileController::class, 'update']);
+
+
+// Go to a calculator page with data from specific GraniteTile
+Route::get('/calculator/{graniteTile}', [CalculatorController::class, 'index']);
+
+// post calculator form data
+Route::post('/calculator/{graniteTile}', [CalculatorController::class, 'calculate']);
