@@ -2,16 +2,13 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 use App\Http\Controllers\CalculatorController;
+use App\Models\GraniteTile;
 
 class CalculatorTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
+
     public function test_kalkulasi_jumlah_granit()
     {
         $panjangRuang = 4;
@@ -39,5 +36,23 @@ class CalculatorTest extends TestCase
 
             $this->assertEquals($jumlah_kardus, $data[2]);
         }
+    }
+
+    public function test_halaman_index()
+    {
+        $response = $this->get('/calculator/1');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_halaman_calculate()
+    {
+        GraniteTile::factory(1)->create();
+        $response = $this->post('/calculator/1', [
+            'length' => 4,
+            'width' => 5,
+        ]);
+
+        $response->assertStatus(200);
     }
 }
