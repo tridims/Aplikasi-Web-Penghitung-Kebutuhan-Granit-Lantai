@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class GraniteTileController extends Controller
 {
-    // show all listings of granite tiles products
     public function index()
     {
         return view('granite_tiles.index', [
@@ -15,7 +14,6 @@ class GraniteTileController extends Controller
         ]);
     }
 
-    // show single GraniteTile
     public function show(GraniteTile $graniteTile)
     {
         return view('granite_tiles.show', [
@@ -23,7 +21,6 @@ class GraniteTileController extends Controller
         ]);
     }
 
-    // show form to create new GraniteTile
     public function create()
     {
         return view('granite_tiles.create', []);
